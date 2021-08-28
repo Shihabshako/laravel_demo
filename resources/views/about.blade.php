@@ -8,5 +8,7 @@
 </head>
 <body>
     <h2>{{$name}} About page</h2>
+    <x-header data="About page component" />
+
 </body>
 </html>

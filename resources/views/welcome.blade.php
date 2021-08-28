@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Wlcome page</h1>
-    <a href="/about/shihab-jamil">About us</a>
-    <a href="/contact"">Contact</a>
+    <x-header data="Welcome page component" />
 </body>
 </html>  

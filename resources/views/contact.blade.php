@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Contact page</h1>
+    <x-header data="Contact page component" />
 </body>
 </html>

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Users;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
+    return view('welcome');
     //we can redirect
-    return redirect('contact');
+    //return redirect('contact');
 });
 
 Route::get('/hello', function () {
@@ -28,7 +31,20 @@ Route::get('/about/{name}', function ($name) {
     return view('about', ['name' => $name]);
 });
 
-// we can use small syntax
+// we can use small syntax but we cant pass the data from the url to view
 
 // Route::view('about', 'about');
 Route::view('contact', 'contact');
+
+
+// laravel 6 and 7 we call contorller like 
+
+//Route::get('users', "Users@index" );
+
+
+//laravel 8 invoke controller method
+
+
+//Route::get('users/{user}', [Users::class, 'index']);
+
+Route::get('users/{name}', [UserController::class,'loadView']);
