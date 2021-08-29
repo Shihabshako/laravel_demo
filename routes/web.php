@@ -47,4 +47,6 @@ Route::view('contact', 'contact');
 
 //Route::get('users/{user}', [Users::class, 'index']);
 
-Route::get('users/{name}', [UserController::class,'loadView']);
+// Route::get('users/{name}', [UserController::class,'loadView']);
+
+Route::get('users', [UserController::class,'viewLoad']);
