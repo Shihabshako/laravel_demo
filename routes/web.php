@@ -52,3 +52,4 @@ Route::view('contact', 'contact');
 //Route::get('users', [UserController::class,'viewLoad']);
 Route::view('login', 'login');
 Route::post('users', [UserController::class, 'getData']);
+Route::view('noaccess', 'noaccess');
