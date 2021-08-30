@@ -8,3 +8,5 @@
     var users = @JSON($users);
     console.log(users);
 </script>
+
+

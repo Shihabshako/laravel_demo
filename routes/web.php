@@ -49,4 +49,6 @@ Route::view('contact', 'contact');
 
 // Route::get('users/{name}', [UserController::class,'loadView']);
 
-Route::get('users', [UserController::class,'viewLoad']);
+//Route::get('users', [UserController::class,'viewLoad']);
+Route::view('login', 'login');
+Route::post('users', [UserController::class, 'getData']);

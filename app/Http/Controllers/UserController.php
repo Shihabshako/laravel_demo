@@ -15,4 +15,13 @@ class UserController extends Controller
         $names = ['anil', 'pitter', 'loki', 'bruce'];
         return view('users', ['users' => $names]);
     }
+
+    public function getData(Request $req){
+        $req->validate([
+            'username' => 'required',
+            'password' => 'required',
+
+        ]);
+        return $req->input();
+    }
 }
