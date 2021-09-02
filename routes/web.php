@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RandomUserController;
+
 
 
 /*
@@ -53,3 +55,7 @@ Route::view('contact', 'contact');
 Route::view('login', 'login');
 Route::post('users', [UserController::class, 'getData']);
 Route::view('noaccess', 'noaccess');
+Route::view('home', 'home');
+Route::get('customers', [UserController::class,'getCustomers']);
+
+Route::get('randomUsers', [RandomUserController::class, 'getRandomUser'] );
