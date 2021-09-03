@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\RandomUserController;
+use App\Http\Controllers\MemberController;
+
 
 
 
@@ -80,3 +82,5 @@ Route::view('home', 'home');
 Route::get('customers', [UserController::class,'getCustomers']);
 
 Route::get('randomUsers', [RandomUserController::class, 'getRandomUser'] );
+
+Route::get('list', [MemberController::class, 'show']);
