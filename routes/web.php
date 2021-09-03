@@ -61,7 +61,7 @@ Route::get('login', function () {
     }
     return view('login');
 });
-Route::post('users', [UserController::class, 'getData']);
+Route::get('users', [UserController::class, 'viewLoad']);
 Route::view('noaccess', 'noaccess');
 Route::post('usersAuth', [UserAuthController::class, 'userLogin']);
 Route::view('profile', 'profile')->middleware('userSessionCheck');

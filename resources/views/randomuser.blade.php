@@ -1,4 +1,5 @@
-<h1>Random users page {{$page}}</h1>
+
+<x-header data="Random users page {{$page}}"/>
 
 <a href="/randomUsers?page=1">Page1</a><br>
 <a href="/randomUsers?page=2">Page2</a><br>

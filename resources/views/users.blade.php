@@ -1,3 +1,5 @@
+<x-header data="Users Page"/>
+
 @include('inner')
 
 @for ($i = 0; $i < count($users); $i++)
