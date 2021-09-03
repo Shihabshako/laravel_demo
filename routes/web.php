@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UploadController;
+use App\Http\Controllers\UserAuthController;
 
 
 /*
@@ -50,6 +52,25 @@ Route::view('contact', 'contact');
 // Route::get('users/{name}', [UserController::class,'loadView']);
 
 //Route::get('users', [UserController::class,'viewLoad']);
-Route::view('login', 'login');
+// Route::view('login', 'login');
+Route::get('login', function () {
+    if(session()->has('username')){
+        return view('profile');
+    }
+    return view('login');
+});
 Route::post('users', [UserController::class, 'getData']);
 Route::view('noaccess', 'noaccess');
+Route::post('usersAuth', [UserAuthController::class, 'userLogin']);
+Route::view('profile', 'profile')->middleware('userSessionCheck');
+
+Route::get('/logout', function () {
+    if(session()->has('username')){
+        session()->pull('username');
+    }
+
+    return redirect('login');
+}); 
+
+Route::view('upload', 'upload');
+Route::post('uploadFile', [UploadController::class,'index']);

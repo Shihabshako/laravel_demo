@@ -1,7 +1,8 @@
-<h1>User Login</h1>
 <x-header data="Login Page"/>
-
-<form action="users" method="POST">
+@if (session('userNeedAuth'))
+    <span style="color:red" >You Need to login first</span>
+@endif
+<form action="usersAuth" method="POST">
     @csrf
     <input type="text" name="username" placeholder="Username" value="{{old('username')}}"><br>
     <span>
