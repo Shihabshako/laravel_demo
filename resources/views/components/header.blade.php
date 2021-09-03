@@ -5,5 +5,7 @@
     <a href="/">Home</a><br>
     <a href="/profile">Profile</a><br>
     <a href="/upload">Upload</a><br>
+    <a href="/users">Users</a><br>
+    <a href="/customers">Customers</a><br>
     <a href="/login">Login</a><br><br>
 </div>

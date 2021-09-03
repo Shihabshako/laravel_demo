@@ -1,1 +1,1 @@
-<h2>You dont have access to this website</h2>
+<h2>You dont have any access to this website</h2>

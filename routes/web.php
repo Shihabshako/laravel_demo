@@ -5,6 +5,8 @@ use App\Http\Controllers\Users;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserAuthController;
+use App\Http\Controllers\RandomUserController;
+
 
 
 /*
@@ -74,3 +76,7 @@ Route::get('/logout', function () {
 
 Route::view('upload', 'upload');
 Route::post('uploadFile', [UploadController::class,'index']);
+Route::view('home', 'home');
+Route::get('customers', [UserController::class,'getCustomers']);
+
+Route::get('randomUsers', [RandomUserController::class, 'getRandomUser'] );
