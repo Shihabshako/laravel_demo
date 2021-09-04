@@ -84,3 +84,8 @@ Route::get('customers', [UserController::class,'getCustomers']);
 Route::get('randomUsers', [RandomUserController::class, 'getRandomUser'] );
 
 Route::get('list', [MemberController::class, 'show']);
+Route::view('addmember', 'addmember');
+Route::post('addmember', [MemberController::class, 'addMember']);
+Route::get('delete/{id}', [MemberController::class, 'deleteMember']);
+Route::get('edit/{id}', [MemberController::class, 'memberDetails']);
+Route::post('edit/updateMember', [MemberController::class, 'updateMember']);
