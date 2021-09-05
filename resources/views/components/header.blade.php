@@ -10,5 +10,6 @@
     <a href="/addmember">Add Members</a><br>
     <a href="/randomUsers">Random Users</a><br>
     <a href="/customers">Customers</a><br>
+    <a href="/dboperation">DB Operation</a><br>
     <a href="/login">Login</a><br><br>
 </div>
