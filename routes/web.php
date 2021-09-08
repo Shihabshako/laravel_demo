@@ -7,6 +7,7 @@ use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\RandomUserController;
 use App\Http\Controllers\MemberController;
+use App\Mail\SampleMail;
 
 
 
@@ -91,3 +92,6 @@ Route::get('edit/{id}', [MemberController::class, 'memberDetails']);
 Route::post('edit/updateMember', [MemberController::class, 'updateMember']);
 
 Route::get('dboperation', [MemberController::class, 'dbOperation']);
+Route::get('email', function () {
+    return new SampleMail();
+});
